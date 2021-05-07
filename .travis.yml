@@ -7,4 +7,5 @@ before_install:
   - docker build -t someshkoli/improved-winter .
 # command to run tests
 script:
+  - docker run someshkoli/improved-winter
   - pytest
