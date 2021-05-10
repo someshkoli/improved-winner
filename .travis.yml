@@ -3,9 +3,9 @@ python:
   - "3.7"
 services:
   - docker
-before_install:
+after_script:
   - docker build -t someshkoli/improved-winter .
 # command to run tests
 script:
-  - docker run someshkoli/improved-winter
   - pytest
+  - docker run someshkoli/improved-winter
